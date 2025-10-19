@@ -685,6 +685,112 @@ body { background: var(--white); }
 
 
 /*-----------------------------------*\
+ * #REVIEW
+\*-----------------------------------*/
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--white);
+  color:var(--spanish-gray);
+  -webkit-font-smoothing:antialiased;
+}
+.container{
+  max-width:900px;
+  margin:48px auto;
+  padding:0 16px;
+}
+
+.review-header{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.review-header h2{
+  color:var(--oxford-blue);
+  margin:0 0 6px 0;
+  font-size:1.6rem;
+}
+
+.review-header p{
+  margin:0;
+  color:var(--bright-navy-blue);
+}
+
+.reviews{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:18px;
+}
+
+.review-card{
+  background: var(--united-nations-blue);
+  border:1px solid rgba(53, 48, 48, 0.724);
+  padding:18px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+
+.review-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
+
+.review-text{
+  margin:0;
+  color:var(--white);
+  line-height:1.45;
+  font-size:0.96rem;
+  max-height:6.2em; /* clamp ~4 lines */
+  overflow:hidden;
+}
+
+.review-meta{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,0.06);
+}
+
+.meta-text .name{
+  margin:0;
+  font-weight:700;
+  color:var(--oxford-blue);
+  font-size:0.95rem;
+}
+
+.meta-text .role{
+  margin:0;
+  font-size:0.78rem;
+  color:var(--white);
+}
+
+
+@media (max-width:420px){
+  .container{margin:24px auto}
+  .review-text{font-size:0.92rem}
+}
+
+
+
+
+
+
+/*-----------------------------------*\
  * #FOOTER
 \*-----------------------------------*/
 
